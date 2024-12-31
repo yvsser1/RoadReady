@@ -4,6 +4,14 @@
 RoadReady is an innovative, user-centric car rental platform designed to revolutionize the way people rent vehicles by combining cutting-edge technology with seamless user experience.
 This Project is part of my Portfolio Porject for ALX SE Program C22 2025
 
+## Website Preview
+
+![Homepage](screenshots/1.png)
+![Features](screenshots/2.png)
+
+## Live Demo
+🔗 [SOON](your-website-url)
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
