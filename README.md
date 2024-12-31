@@ -8,6 +8,8 @@ This Project is part of my Portfolio Porject for ALX SE Program C22 2025
 
 ![Homepage](screenshots/1.png)
 ![Features](screenshots/2.png)
+![CarsPage](screenshots/3.png)
+![AdminDashboard](screenshots/admin1.png)
 
 ## Live Demo
 🔗 [SOON](your-website-url)
