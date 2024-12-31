@@ -1,6 +1,7 @@
-# React + TypeScript + Vite
+# RoadReady - Car Rental Platform
+## Built with React + TypeScript + Vite + Shadcn/UI + Supabase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+RoadReady is an innovative, user-centric car rental platform designed to revolutionize the way people rent vehicles by combining cutting-edge technology with seamless user experience.
 
 Currently, two official plugins are available:
 
