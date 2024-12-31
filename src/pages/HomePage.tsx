@@ -77,7 +77,7 @@ export default function HomePage() {
                   Your Way
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-[500px]">
-                  Experience the ultimate freedom of choice with GoCar - tailor your
+                  Experience the ultimate freedom of choice with RoadReady - tailor your
                   adventure by choosing from our premium fleet of vehicles.
                 </p>
               </div>

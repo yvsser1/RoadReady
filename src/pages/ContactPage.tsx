@@ -7,6 +7,7 @@ import { Label } from '../components/ui/label'
 import { toast } from '../hooks/use-toast'
 import { MapPin, Phone, Mail } from 'lucide-react'
 import OpenStreetMap from '../components/OpenStreetMap'
+import { SiteFooter } from '../components/site-footer'
 
 export default function ContactPage() {
   const [name, setName] = useState('')
@@ -33,6 +34,7 @@ export default function ContactPage() {
   const mapPosition: [number, number] = [40.7128, -74.0060] // Example coordinates (New York City)
 
   return (
+    <div className="min-h-screen bg-background text-foreground">
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
       <div className="grid md:grid-cols-2 gap-8">
@@ -105,7 +107,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="mr-2 h-4 w-4" />
-                  <p>contact@drivoxe.com</p>
+                  <p>contact@roadready.com</p>
                 </div>
               </div>
             </CardContent>
@@ -119,7 +121,9 @@ export default function ContactPage() {
             </CardContent>
           </Card>
         </div>
-      </div>
+      </div>  
+    </div>
+    <SiteFooter />
     </div>
   )
 }

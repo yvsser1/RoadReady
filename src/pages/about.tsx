@@ -4,7 +4,7 @@ import { Process } from "../components/about/process"
 import { Achievements } from "../components/about/achievements"
 import { CTA } from "../components/about/cta"
 import { Newsletter } from "../components/about/newsletter"
-import { Footer } from "../components/about/footer"
+import { SiteFooter } from '../components/site-footer'
 import { Button } from "@/components/ui/button"
 
 export default function AboutPage() {
@@ -92,7 +92,7 @@ export default function AboutPage() {
         <Achievements />
         <CTA />
         <Newsletter />
-        <Footer />
+        <SiteFooter />
       </main>
     </div>
   )

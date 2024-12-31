@@ -78,7 +78,7 @@ export default function Header({ darkMode, toggleDarkMode }: HeaderProps) {
         <div className="flex items-center justify-between h-16">
           <Link 
             to="/" 
-            className="text-2xl font-bold text-primary hover:opacity-90 transition-opacity"
+            className="text-2xl font-heading font-bold text-primary hover:opacity-90 transition-opacity"
           >
             RoadReady
           </Link>
