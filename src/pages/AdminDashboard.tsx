@@ -80,9 +80,9 @@ export default function AdminDashboard() {
       const recentSales = rentals.slice(0, 5).map(rental => ({
         id: rental.id,
         user: {
-          name: rental.user.full_name,
-          email: rental.user.email,
-          avatar: rental.user.avatar_url
+          name: rental.user[0].full_name,
+          email: rental.user[0].email,
+          avatar: rental.user[0].avatar_url
         },
         amount: rental.total_price,
         date: new Date(rental.created_at).toLocaleDateString()

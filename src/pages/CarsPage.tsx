@@ -112,7 +112,7 @@ export default function CarsPage() {
 
       let query = baseQuery
       filters.forEach(([column, operator, value]) => {
-        query = query.filter(column, operator, value)
+        query = query.filter(column, operator, value.toString())
       })
 
       const from = (page - 1) * itemsPerPage
@@ -309,8 +309,7 @@ export default function CarsPage() {
                     <PaginationItem>
                       <PaginationPrevious 
                         onClick={() => setPage(p => Math.max(1, p - 1))}
-                        disabled={page === 1}
-                        className="transition-all duration-200 hover:scale-105 hover:bg-red-50 disabled:opacity-50"
+                        className={`transition-all duration-200 hover:scale-105 hover:bg-red-50 ${page === 1 ? 'opacity-50' : ''}`}
                       />
                     </PaginationItem>
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
@@ -330,8 +329,7 @@ export default function CarsPage() {
                     <PaginationItem>
                       <PaginationNext 
                         onClick={() => setPage(p => Math.min(totalPages, p + 1))}
-                        disabled={page === totalPages}
-                        className="transition-all duration-200 hover:scale-105 hover:bg-red-50 disabled:opacity-50"
+                        className={`transition-all duration-200 hover:scale-105 hover:bg-red-50 ${page === totalPages ? 'opacity-50' : ''}`}
                       />
                     </PaginationItem>
                   </PaginationContent>

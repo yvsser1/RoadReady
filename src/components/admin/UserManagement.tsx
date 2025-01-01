@@ -40,6 +40,7 @@ interface User {
   full_name: string
   is_admin: boolean
   created_at: string
+  password?: string
 }
 
 export default function UserManagement() {
@@ -141,27 +142,29 @@ export default function UserManagement() {
       if (authError) throw authError
 
       // Create user profile
-      const { error: profileError } = await supabaseAdmin
-        .from('users')
-        .insert([{
-          id: authData.user.id,
-          email: newUser.email,
-          full_name: newUser.full_name,
-          created_at: new Date().toISOString()
-        }])
-
-      if (profileError) throw profileError
-
-      // Set admin role if needed
-      if (newUser.is_admin) {
-        const { error: adminError } = await supabaseAdmin
-          .from('admin_roles')
+      if (authData.user) {
+        const { error: profileError } = await supabaseAdmin
+          .from('users')
           .insert([{
-            user_id: authData.user.id,
-            is_admin: true
+            id: authData.user.id,
+            email: newUser.email,
+            full_name: newUser.full_name,
+            created_at: new Date().toISOString()
           }])
 
-        if (adminError) throw adminError
+        if (profileError) throw profileError
+
+        // Set admin role if needed
+        if (newUser.is_admin) {
+          const { error: adminError } = await supabaseAdmin
+            .from('admin_roles')
+            .insert([{
+              user_id: authData.user.id,
+              is_admin: true
+            }])
+
+          if (adminError) throw adminError
+        }
       }
 
       toast({
@@ -544,10 +547,14 @@ export default function UserManagement() {
             <Pagination>
               <PaginationContent>
                 <PaginationItem>
-                  <PaginationPrevious 
+                  <Button 
                     onClick={() => setPage(p => Math.max(1, p - 1))}
                     disabled={page === 1}
-                  />
+                    variant="outline"
+                    size="sm"
+                  >
+                    Previous
+                  </Button>
                 </PaginationItem>
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
                   <PaginationItem key={pageNumber}>
@@ -560,10 +567,14 @@ export default function UserManagement() {
                   </PaginationItem>
                 ))}
                 <PaginationItem>
-                  <PaginationNext 
+                  <Button 
                     onClick={() => setPage(p => Math.min(totalPages, p + 1))}
                     disabled={page === totalPages}
-                  />
+                    variant="outline"
+                    size="sm"
+                  >
+                    Next
+                  </Button>
                 </PaginationItem>
               </PaginationContent>
             </Pagination>

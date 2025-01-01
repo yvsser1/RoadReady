@@ -141,10 +141,14 @@ export default function RentalManagement() {
         <Pagination>
           <PaginationContent>
             <PaginationItem>
-              <PaginationPrevious 
+              <Button 
                 onClick={() => setPage(p => Math.max(1, p - 1))}
                 disabled={page === 1}
-              />
+                variant="outline"
+                size="sm"
+              >
+                Previous
+              </Button>
             </PaginationItem>
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
               <PaginationItem key={pageNumber}>
@@ -157,10 +161,14 @@ export default function RentalManagement() {
               </PaginationItem>
             ))}
             <PaginationItem>
-              <PaginationNext 
+              <Button 
                 onClick={() => setPage(p => Math.min(totalPages, p + 1))}
                 disabled={page === totalPages}
-              />
+                variant="outline"
+                size="sm"
+              >
+                Next
+              </Button>
             </PaginationItem>
           </PaginationContent>
         </Pagination>
