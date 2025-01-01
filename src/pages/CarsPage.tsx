@@ -88,7 +88,7 @@ export default function CarsPage() {
         .from('cars')
         .select('*', { count: 'exact' })
 
-      let filters = []
+      let filters: [string, string, string | number][] = []
       
       if (categoryFilter && categoryFilter !== 'all') {
         filters.push(['category', 'eq', categoryFilter])
