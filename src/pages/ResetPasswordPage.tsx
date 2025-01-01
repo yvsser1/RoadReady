@@ -78,7 +78,7 @@ export default function ResetPasswordPage() {
             </form>
             <div className="relative hidden bg-muted md:block">
               <img
-                src="https://gyazo.com/6c35f053a6b1fca0c8e15bdb02e23295"
+                src="https://i.pinimg.com/736x/83/85/86/8385862fc782b1abca1dc3f803afe8f6.jpg"
                 alt="Luxury car dashboard"
                 className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
               />
