@@ -12,7 +12,7 @@ This Project is part of my Portfolio Porject for ALX SE Program C22 2025
 ![AdminDashboard](screenshots/admin1.png)
 
 ## Live Demo
-🔗 [SOON](your-website-url)
+🔗 [DEMO](https://road-ready-nu.vercel.app/)
 
 Currently, two official plugins are available:
 
