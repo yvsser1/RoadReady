@@ -367,7 +367,7 @@ export default function UserManagement() {
       .from('users')
       .insert([
         {
-          id: authData.user.id, // Use the user ID from the authentication
+          id: authData?.user?.id, // Use the user ID from the authentication, handling potential null
           full_name: fullName,
           email: email, // Store the email for reference
           created_at: new Date().toISOString(),
