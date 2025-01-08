@@ -2,7 +2,15 @@
 ## Built with React + TypeScript + Vite + Shadcn/UI + Supabase
 
 RoadReady is an innovative, user-centric car rental platform designed to revolutionize the way people rent vehicles by combining cutting-edge technology with seamless user experience.
-This Project is part of my Portfolio Porject for ALX SE Program C22 2025
+This Project is part of My Portfolio Porject for ALX SE Program C#22
+
+## Project setup
+
+The first thing you'll need to do is install NPM dependencies. and then run in your local machine pretty easy!
+
+```sh
+npm install && npm run dev
+```
 
 ## Website Preview
 
